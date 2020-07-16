@@ -4,12 +4,12 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
    entry: {
-      hello_world: "./src/hello-world"
+      "main-concepts/01-hello-world/app": "./src/main-concepts/01-hello-world/index.js"
    },
    output: {
       path: path.resolve(__dirname, "dist/"),
       publicPath: "/dist/",
-      filename: "js/[name].js"
+      filename: "[name].js"
    },
    mode: "development",
    module: {
@@ -36,8 +36,8 @@ module.exports = {
    },
    plugins: [
       new MiniCssExtractPlugin({
-         filename: "css/[name].css",
-         chunkFilename: "css/[id].css"
+         filename: "[name].css",
+         chunkFilename: "[id].css"
       })
    ]
 };
