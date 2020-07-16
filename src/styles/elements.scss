@@ -1,0 +1,117 @@
+::selection {
+   background: $selection-bg;
+   color: $selection-text;
+}
+
+:root {
+   font-size: $base-type-size;
+
+   @media (min-width: $viewport-md-up) {
+      font-size: $base-type-size--vp-lg;
+   }
+}
+
+body {
+   background-color: $body-bg;
+   font-family: $base-typeface;
+   font-size: 1rem;
+   line-height: $base-leading;
+   font-weight: $base-type-weight;
+   color: $base-text-color;
+}
+
+strong,
+b {
+   font-weight: $type-weight-bold;
+}
+
+em,
+i {
+   font-style: italic;
+}
+
+a {
+   color: $link-color;
+   border-bottom: $link-uline;
+   text-decoration: none;
+   padding-bottom: 1px;
+}
+
+a:hover,
+a:focus,
+a:active {
+   color: $link-color--highlight;
+   border-bottom: $link-uline--highlight;
+}
+
+a:visited {
+   color: $link-color--visited;
+}
+
+// To make focus ring treatment consistent across all element
+// UNLESS certain element needs special styline to stand out
+:focus {
+   outline: $outline-style;
+   outline-offset: $outline-offset;
+}
+
+p,
+ul,
+ol,
+blockquote,
+pre,
+figure {
+   margin-bottom: $base-margin-bottom;
+}
+
+ul,
+ol {
+   padding-left: $space-md;
+}
+
+h1,
+h2,
+h3 {
+   line-height: $heading-leading;
+   font-weight: $heading-type-weight;
+   font-family: $heading-typeface;
+   margin: $heading-margin;
+}
+
+h1 {
+   @include font-size(xxl);
+}
+
+h2 {
+   @include font-size(xl);
+}
+
+h3 {
+   @include font-size(lg);
+}
+
+blockquote {
+   border-radius: $blockquote-radius;
+   background: $blockquote-bg;
+   padding: $blockquote-padding;
+   border-left: $blockquote-border-left;
+   @include font-size(sm);
+}
+
+blockquote > * {
+   margin-bottom: $space-xs;
+}
+
+blockquote > *:last-child {
+   margin-bottom: 0;
+}
+
+cite:before {
+   content: "―";
+   padding-right: $space-xs;
+}
+
+cite {
+   font-style: normal;
+   font-weight: $type-weight-bold;
+}
