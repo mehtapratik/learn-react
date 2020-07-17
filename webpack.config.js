@@ -7,7 +7,9 @@ module.exports = {
    entry: {
       "main-concepts/01-hello-world/app": "./src/main-concepts/01-hello-world",
       "main-concepts/02-introducing-jsx/app":
-         "./src/main-concepts/02-introducing-jsx"
+         "./src/main-concepts/02-introducing-jsx",
+      "main-concepts/03-rendering-elements/app":
+         "./src/main-concepts/03-rendering-elements"
    },
    output: {
       path: path.resolve(__dirname, "dist/"),

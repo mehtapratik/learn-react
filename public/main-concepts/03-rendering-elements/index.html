@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1.0"
+      />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <title>Rendering Elements | Main Concepts | Learn React</title>
+      <link
+         href="/dist/main-concepts/03-rendering-elements/app.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <main class="stage" id="root">
+         <h1>Rendering Elements</h1>
+         <p class="intro">
+            Elements are the smallest building blocks of React apps. An element
+            describes what you want to see on the screen:
+         </p>
+         <pre id="codeElement">Code Exmaple</pre>
+         <p>
+            Unlike browser DOM elements, React elements are plain objects, and
+            are cheap to create. React DOM takes care of updating the DOM to
+            match the React elements.
+         </p>
+         <p>
+            Elements are not components. Elements are what components are “made
+            of”.
+         </p>
+         <p>
+            Usually applications created with React have a single "root" DOM
+            node. Everything inside is managed by React DOM. To render anything
+            inside this root DOM node, use ReactDOM.render() method.
+         </p>
+         <p>
+            React elements are immutable. Once you create an element, you can’t
+            change its children or attributes. An element is like a single frame
+            in a movie: it represents the UI at a certain point in time.
+         </p>
+         <p>
+            React DOM compares the element and its children to the previous one,
+            and only applies the DOM updates necessary to bring the DOM to the
+            desired state.
+         </p>
+         <p>Consider this ticking clock example:</p>
+         <pre id="codeTicks">Code example:</pre>
+         <section class="preview" id="previewTicks"></section>
+         <p>
+            Even though we create an element describing the whole UI tree on
+            every tick, only the text node whose contents have changed gets
+            updated by React DOM. You can verify by inspecting the last example
+            with the browser tools.
+         </p>
+         <p>
+            In our experience, thinking about how the UI should look at any
+            given moment, rather than how to change it over time, eliminates a
+            whole class of bugs.
+         </p>
+      </main>
+
+      <noscript>
+         You need to enable JavaScript to run this app.
+      </noscript>
+      <script src="/dist/main-concepts/03-rendering-elements/app.js"></script>
+   </body>
+</html>
