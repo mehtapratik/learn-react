@@ -1,4 +1,7 @@
 import Prism from "../../_globals/libs/prism/prism";
+import "prismjs/themes/prism-tomorrow.css";
+
+import "../styles/global.scss";
 
 function escape(string, lang) {
    var pre = document.createElement("pre");

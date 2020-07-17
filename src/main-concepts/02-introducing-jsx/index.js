@@ -1,4 +1,4 @@
-import "./styles.scss";
+import { loadCodeSnippets } from "../../_globals/js/site";
 
 // Hello {name}
 import "./examples/hello-name";
@@ -8,8 +8,6 @@ import "./examples/user-object";
 
 // Attributes with String and Expression values
 import "./examples/attributes";
-
-import { loadCodeSnippets } from "../../_globals/js/site";
 
 loadCodeSnippets([
    [

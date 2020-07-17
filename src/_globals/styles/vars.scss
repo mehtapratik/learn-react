@@ -6,17 +6,16 @@ $color-black: #000;
 $color-jet: #363636;
 $color-dim-gray: #696969;
 $color-spanish-gray: #989898;
-$color-fog: #e0e0e0;
+$color-fog: #efefef;
 $color-white: #fff;
 
 // Typography
-$typeface-serif: "Zilla Slab", Georgia, serif;
-$typeface-sans: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
-$typeface-mono: consolas, monaco, menlo, monospace;
+$typeface-serif: "Playfair Display", Georgia, serif;
+$typeface-sans: "Ubuntu", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$typeface-mono: "Roboto Mono", consolas, monaco, menlo, monospace;
 
-$type-weight-light: 300;
-$type-weight-regular: 400;
-$type-weight-bold: 700;
+$type-weight-regular: 300;
+$type-weight-bold: 600;
 
 $leading-none: 1;
 $leading-sm: 1.2;
@@ -49,7 +48,7 @@ $radius-lg: 10px;
 $radius-circle: 50%;
 
 // Consistent outline styles for focus-ring
-$outline-style: 2px dashed currentColor;
+$outline-style: 2px solid currentColor;
 $outline-offset: 1px;
 
 // Selected text
@@ -67,9 +66,9 @@ $body-bg: $color-white;
 $base-text-color: $color-jet;
 $base-leading: $leading-md;
 $base-typeface: $typeface-sans;
-$base-type-size: 20px;
-$base-type-size--vp-lg: 18px;
-$base-type-weight: $type-weight-light;
+$base-type-size: 18px;
+$base-type-size--vp-lg: 16px;
+$base-type-weight: $type-weight-regular;
 
 // links
 $link-color: #036cc9;
@@ -79,7 +78,7 @@ $link-uline: 1px solid transparent;
 $link-uline--highlight: 1px solid currentColor;
 
 // Typography
-$heading-typeface: $typeface-sans;
+$heading-typeface: $typeface-mono;
 $heading-type-weight: $type-weight-bold;
 $heading-leading: $leading-sm;
 $heading-color: $text-darker;

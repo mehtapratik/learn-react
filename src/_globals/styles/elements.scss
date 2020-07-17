@@ -44,12 +44,16 @@ a:active {
    border-bottom: $link-uline--highlight;
 }
 
+a:focus {
+   border-bottom: 0;
+}
+
 a:visited {
    color: $link-color--visited;
 }
 
 // To make focus ring treatment consistent across all element
-// UNLESS certain element needs special styline to stand out
+// UNLESS certain element needs special treatment to stand out
 :focus {
    outline: $outline-style;
    outline-offset: $outline-offset;
@@ -81,6 +85,8 @@ h3 {
 
 h1 {
    @include font-size(xxl);
+   font-family: $typeface-serif;
+   font-weight: 500;
 }
 
 h2 {
@@ -115,4 +121,11 @@ cite:before {
 cite {
    font-style: normal;
    font-weight: $type-weight-bold;
+}
+
+pre,
+code,
+code[class*="language-"],
+pre[class*="language-"] {
+   font-family: $typeface-mono;
 }

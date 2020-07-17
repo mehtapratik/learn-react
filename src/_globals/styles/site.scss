@@ -7,13 +7,12 @@
 }
 
 .intro {
-   font-weight: $type-weight-light;
    font-size: 1.35rem;
    color: $text-lighter;
 }
 
 .preview {
-   background-color: #efefef;
+   background-color: $color-fog;
    padding: $space-xs;
    border-radius: $space-2xs;
    margin-bottom: $space-sm;
