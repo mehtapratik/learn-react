@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1.0"
+      />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <title>Introducing JSX | Main Concepts | Learn React</title>
+      <link
+         href="/dist/main-concepts/02-introducing-jsx/app.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <main class="stage" id="root">
+         <h1>Introducing JSX</h1>
+         <p>
+            The HTML/XML like tag syntax used by React is JSX. It is syntax
+            extension to JavaScript. JSX produces React “elements”.
+         </p>
+         <p>
+            React embraces the fact that rendering logic is inherently coupled
+            with other UI logic: how events are handled, how the state changes
+            over time, and how the data is prepared for display. Instead of
+            artificially separating technologies by putting markup and logic in
+            separate files, React separates concerns with loosely coupled units
+            called “components” that contain both.
+         </p>
+         <p>
+            React doesn’t require using JSX, but most people find it helpful as
+            a visual aid when working with UI inside the JavaScript code. It
+            also allows React to show more useful error and warning messages.
+         </p>
+         <p>
+            JSX prevents inection attacks. It is safe to embed user input in
+            JSX. By default, React DOM escapes any values embedded in JSX before
+            rendering them. Thus it ensures that you can never inject anything
+            that’s not explicitly written in your application. Everything is
+            converted to a string before being rendered. This helps prevent XSS
+            (cross-site-scripting) attacks.
+         </p>
+         <p>
+            JSX represents objects. Babel compiles JSX down to
+            React.createElement() calls. Furthermore, React.createElement()
+            performs a few checks to help you write bug-free code but
+            essentially it creates an object literal that holds the description
+            of what you want to render on screen. These object literals are
+            called “React elements”. React reads these objects and uses them to
+            construct the DOM and keep it up to date.
+         </p>
+         <pre id="codeJsx"></pre>
+         <p>Above is same as below:</p>
+         <pre id="codeCreateEl"></pre>
+         <p>Both, essentially creates an object like this:</p>
+         <pre id="codeReactEl"></pre>
+         <h2>Scratchpad</h2>
+         <h3>Hello {name}</h3>
+         <p>
+            You can put any valid JavaScript expression inside the curly braces
+            in JSX:
+         </p>
+         <pre id="codeHelloName">Code example</pre>
+         <section class="preview" id="hello"></section>
+
+         <h3>Hello {userObject}</h3>
+         <p>
+            After compilation, JSX expressions become regular JavaScript
+            function calls and evaluate to JavaScript objects. This means that
+            you can use JSX inside of if statements and for loops, assign it to
+            variables, accept it as arguments, and return it from functions:
+         </p>
+         <pre id="codeUserObject">Code example</pre>
+         <div class="preview">
+            <section id="userObject"></section>
+            <section id="invalidObject"></section>
+         </div>
+
+         <h3>Attributes with string and expression values</h3>
+         <p>
+            You may use quotes to specify string literals as attributes. You may
+            also use curly braces to embed a JavaScript expression in an
+            attribute. Don’t put quotes around curly braces when embedding a
+            JavaScript expression in an attribute. You should either use quotes
+            (for string values) or curly braces (for expressions), but not both
+            in the same attribute:
+         </p>
+         <pre id="codeExAttributes">Code example</pre>
+         <section class="preview" id="elWithAttr"></section>
+         <p>
+            Since JSX is closer to JavaScript than to HTML, React DOM uses
+            camelCase property naming convention instead of HTML attribute
+            names. For example, class becomes className in JSX, and tabindex
+            becomes tabIndex.
+         </p>
+      </main>
+
+      <noscript>
+         You need to enable JavaScript to run this app.
+      </noscript>
+      <script src="/dist/main-concepts/02-introducing-jsx/app.js"></script>
+   </body>
+</html>

@@ -11,11 +11,12 @@ $color-white: #fff;
 
 // Typography
 $typeface-serif: "Zilla Slab", Georgia, serif;
-$typeface-sans: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$typeface-sans: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $typeface-mono: consolas, monaco, menlo, monospace;
 
+$type-weight-light: 300;
 $type-weight-regular: 400;
-$type-weight-bold: 600;
+$type-weight-bold: 700;
 
 $leading-none: 1;
 $leading-sm: 1.2;
@@ -65,10 +66,10 @@ $text-inactive: $color-spanish-gray;
 $body-bg: $color-white;
 $base-text-color: $color-jet;
 $base-leading: $leading-md;
-$base-typeface: $typeface-serif;
-$base-type-size: 18px;
-$base-type-size--vp-lg: 16px;
-$base-type-weight: $type-weight-regular;
+$base-typeface: $typeface-sans;
+$base-type-size: 20px;
+$base-type-size--vp-lg: 18px;
+$base-type-weight: $type-weight-light;
 
 // links
 $link-color: #036cc9;

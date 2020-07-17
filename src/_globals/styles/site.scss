@@ -5,3 +5,21 @@
    padding-left: 1rem;
    padding-right: 1rem;
 }
+
+.intro {
+   font-weight: $type-weight-light;
+   font-size: 1.35rem;
+   color: $text-lighter;
+}
+
+.preview {
+   background-color: #efefef;
+   border: 1px solid darken(#efefef, 10%);
+   padding: $space-xs;
+   border-radius: $space-2xs;
+   margin-bottom: $space-sm;
+   > :last-child,
+   > :last-child > p {
+      margin-bottom: 0;
+   }
+}

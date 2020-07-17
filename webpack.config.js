@@ -3,8 +3,11 @@ const webpack = require("webpack");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
+   target: "node",
    entry: {
-      "main-concepts/01-hello-world/app": "./src/main-concepts/01-hello-world/index.js"
+      "main-concepts/01-hello-world/app": "./src/main-concepts/01-hello-world",
+      "main-concepts/02-introducing-jsx/app":
+         "./src/main-concepts/02-introducing-jsx"
    },
    output: {
       path: path.resolve(__dirname, "dist/"),
