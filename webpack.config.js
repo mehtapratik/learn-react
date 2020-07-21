@@ -9,7 +9,9 @@ module.exports = {
       "main-concepts/02-introducing-jsx/app":
          "./src/main-concepts/02-introducing-jsx",
       "main-concepts/03-rendering-elements/app":
-         "./src/main-concepts/03-rendering-elements"
+         "./src/main-concepts/03-rendering-elements",
+      "main-concepts/04-comps-and-props/app":
+         "./src/main-concepts/04-comps-and-props"
    },
    output: {
       path: path.resolve(__dirname, "dist/"),
@@ -27,7 +29,8 @@ module.exports = {
          },
          {
             test: /\.(css|scss)$/,
-            use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+            use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+            sideEffects: true
          }
       ]
    },

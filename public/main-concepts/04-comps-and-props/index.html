@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1.0"
+      />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <title>Components and Properties | Main Concepts | Learn React</title>
+      <link
+         href="/dist/main-concepts/04-comps-and-props/app.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <main class="stage" id="root">
+         <h1>Components and Properties</h1>
+         <p class="intro">
+            Conceptually, components are like JavaScript functions. They accept
+            arbitrary inputs (called “props”) and return React elements
+            describing what should appear on the screen.
+         </p>
+         <p>
+            You can either declare a React component inside a JavaScript
+            functions or by using an ES6 class. React components declared as
+            functions are known as “function components”.
+         </p>
+         <h2>Function and Class Components</h2>
+         <p>
+            The simplest way to define a component is to write a JavaScript
+            function:
+         </p>
+         <pre id="codeFuncComp">code example</pre>
+         <section id="previewFuncComp" class="preview"></section>
+         <pre id="codeEs6Class">code example</pre>
+         <section id="previewEs6Class" class="preview"></section>
+
+         <h2>Rendering a Component</h2>
+         <p>
+            You can either declare your React elemment that represents
+            intrinstic DOM elements or you can define your own element. In later
+            case, React passes JSX attributes and its children to the declared
+            components as a single object - props.
+         </p>
+         <p>
+            Always start component names with a capital letter. React treats
+            components starting with lowercase letters as DOM tags.
+         </p>
+         <h2>Composing Components</h2>
+         <p>
+            Components can refer to other components in their output. This lets
+            us use the same component abstraction for any level of detail.
+            Typically, new React apps have a single App component at the very
+            top. However, if you integrate React into an existing app, you might
+            start bottom-up with a small component like Button and gradually
+            work your way to the top of the view hierarchy.
+         </p>
+         <h2>Props are read-only</h2>
+         <p>
+            Whether you declare a component as a function or a class, it must
+            never modify its own props.
+         </p>
+         <p>
+            Of course, application UIs are dynamic and change over time. React
+            offers “state” for this purpose. State allows React components to
+            change their output over time in response to user actions, network
+            responses, and anything else, without violating this rule.
+         </p>
+         <pre id="codeButton"></pre>
+         <section id="previewButton" class="preview"></section>
+      </main>
+
+      <noscript>
+         You need to enable JavaScript to run this app.
+      </noscript>
+      <script src="/dist/main-concepts/04-comps-and-props/app.js"></script>
+   </body>
+</html>

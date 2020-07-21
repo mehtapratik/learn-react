@@ -123,6 +123,18 @@ cite {
    font-weight: $type-weight-bold;
 }
 
+code {
+   background-color: $color-jet;
+   color: $color-white;
+   padding: 1px 5px;
+   border-radius: 2px;
+}
+
+pre code {
+   background-color: transparent;
+   color: inherit;
+}
+
 pre,
 code,
 code[class*="language-"],
