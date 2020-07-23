@@ -15,7 +15,9 @@ module.exports = {
       "main-concepts/05-state-and-lifecycle/app":
          "./src/main-concepts/05-state-and-lifecycle",
       "main-concepts/06-handling-events/app":
-         "./src/main-concepts/06-handling-events"
+         "./src/main-concepts/06-handling-events",
+      "main-concepts/07-conditional-rendering/app":
+         "./src/main-concepts/07-conditional-rendering"
    },
    output: {
       path: path.resolve(__dirname, "dist/"),

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1.0"
+      />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <title>Conditional rendering | Main Concepts | Learn React</title>
+      <link
+         href="/dist/main-concepts/07-conditional-rendering/app.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <main class="stage" id="root">
+         <h1>Conditional rendering</h1>
+         <p class="intro">
+            Conditional rendering in React works the same way conditions work in
+            JavaScript. Use JavaScript operators like if or the conditional
+            operator to create elements representing the current state, and let
+            React update the UI to match them.
+         </p>
+         <h2>Inline if with logical && operator</h2>
+         <p>
+            You may embed expressions in JSX by wrapping them in curly braces.
+            This includes the JavaScript logical && operator. It can be handy
+            for conditionally including an element:
+         </p>
+         <pre id="codeInlineIf"></pre>
+         <p>
+            It works because in JavaScript, true && expression always evaluates
+            to expression, and false && expression always evaluates to false.
+         </p>
+         <p>
+            Therefore, if the condition is true, the element right after && will
+            appear in the output. If it is false, React will ignore and skip it.
+         </p>
+         <p>
+            Just like in JavaScript, it is up to you to choose an appropriate
+            style based on what you and your team consider more readable. Also
+            remember that whenever conditions become too complex, it might be a
+            good time to extract a component.
+         </p>
+         <h2>Preventing component from rendering</h2>
+         <p>
+            In rare cases you might want a component to hide itself even though
+            it was rendered by another component. To do this return null instead
+            of its render output.
+         </p>
+         <p>
+            Returning null from a component’s render method does not affect the
+            firing of the component’s lifecycle methods.
+         </p>
+      </main>
+
+      <noscript>
+         You need to enable JavaScript to run this app.
+      </noscript>
+      <script src="/dist/main-concepts/07-conditional-rendering/app.js"></script>
+   </body>
+</html>
