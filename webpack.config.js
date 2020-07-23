@@ -13,7 +13,9 @@ module.exports = {
       "main-concepts/04-comps-and-props/app":
          "./src/main-concepts/04-comps-and-props",
       "main-concepts/05-state-and-lifecycle/app":
-         "./src/main-concepts/05-state-and-lifecycle"
+         "./src/main-concepts/05-state-and-lifecycle",
+      "main-concepts/06-handling-events/app":
+         "./src/main-concepts/06-handling-events"
    },
    output: {
       path: path.resolve(__dirname, "dist/"),
