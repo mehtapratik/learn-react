@@ -1,0 +1,3 @@
+this.setState({
+   [name]: value
+});
