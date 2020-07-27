@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1.0"
+      />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <title>Lifting State Up | Main Concepts | Learn React</title>
+      <link
+         href="/dist/main-concepts/10-lifting-state-up/app.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <main class="stage" id="root">
+         <h1>Lifting State Up</h1>
+         <p>
+            Often, several components need to reflect the same changing data. We
+            recommend lifting the shared state up to their closest common
+            ancestor.
+         </p>
+         <pre id="codeCalculator"></pre>
+         <section id="previewCalculator" class="preview"></section>
+         <p>
+            There should be a single “source of truth” for any data that changes
+            in a React application. Usually, the state is first added to the
+            component that needs it for rendering. Then, if other components
+            also need it, you can lift it up to their closest common ancestor.
+            Instead of trying to sync the state between different components,
+            you should rely on the top-down data flow.
+         </p>
+         <p>
+            Lifting state involves writing more “boilerplate” code than two-way
+            binding approaches, but as a benefit, it takes less work to find and
+            isolate bugs. Since any state “lives” in some component and that
+            component alone can change it, the surface area for bugs is greatly
+            reduced.
+         </p>
+         <p>
+            If something can be derived from either props or state, it probably
+            shouldn’t be in the state.
+         </p>
+      </main>
+
+      <noscript>
+         You need to enable JavaScript to run this app.
+      </noscript>
+      <script src="/dist/main-concepts/10-lifting-state-up/app.js"></script>
+   </body>
+</html>
