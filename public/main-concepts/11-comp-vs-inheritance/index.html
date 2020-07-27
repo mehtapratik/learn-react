@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1.0"
+      />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <title>Composition vs. Inheritance | Main Concepts | Learn React</title>
+      <link
+         href="/dist/main-concepts/11-comp-vs-inheritance/app.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <main class="stage" id="root">
+         <h1>Composition vs. Inheritance</h1>
+         <p class="intro">
+            Makers of React recommends using composition approach instead of
+            inheritance to make the out of it.
+         </p>
+         <p>
+            In this section, we will consider a few problems where developers
+            new to React often reach for inheritance, and show how we can solve
+            them with composition.
+         </p>
+         <h2>Containment</h2>
+         <p>
+            Some components don’t know their children ahead of time. This is
+            especially common for components like Sidebar or Dialog that
+            represent generic “boxes”.
+         </p>
+         <p>
+            We recommend that such components use the special children prop to
+            pass children elements directly into their output. This lets other
+            components pass arbitrary children to them by nesting the JSX:
+         </p>
+         <pre id="codeChildrenProp"></pre>
+         <p>
+            While this is less common, sometimes you might need multiple “holes”
+            in a component. In such cases you may come up with your own
+            convention instead of using children:
+         </p>
+         <pre id="codeCustomHoles"></pre>
+         <h2>Specialization</h2>
+         <p>
+            Sometimes we think about components as being “special cases” of
+            other components. For example, we might say that a WelcomeDialog is
+            a special case of Dialog.
+         </p>
+         <p>
+            In React, this is also achieved by composition, where a more
+            “specific” component renders a more “generic” one and configures it
+            with props:
+         </p>
+         <pre id="codeSpecialization"></pre>
+      </main>
+
+      <noscript>
+         You need to enable JavaScript to run this app.
+      </noscript>
+      <script src="/dist/main-concepts/11-comp-vs-inheritance/app.js"></script>
+   </body>
+</html>
