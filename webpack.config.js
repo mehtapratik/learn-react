@@ -26,7 +26,8 @@ module.exports = {
       "main-concepts/11-comp-vs-inheritance/app":
          "./src/main-concepts/11-comp-vs-inheritance",
       "main-concepts/12-thinking-in-react/app":
-         "./src/main-concepts/12-thinking-in-react"
+         "./src/main-concepts/12-thinking-in-react",
+      "advanced-guides/accessibility/app": "./src/advanced-guides/accessibility"
    },
    output: {
       path: path.resolve(__dirname, "dist/"),

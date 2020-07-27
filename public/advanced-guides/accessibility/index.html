@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1.0"
+      />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <title>Accessibility | Advanced Concepts | Learn React</title>
+      <link
+         href="/dist/advanced-guides/accessibility/app.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <main class="stage" id="root">
+         <h1>Accessibility</h1>
+         <p class="intro">
+            React fully supports building accessible websites, often by using
+            standard HTML techniques.
+         </p>
+         <p>
+            Note that all aria-* HTML attributes are fully supported in JSX.
+            Whereas most DOM properties and attributes in React are camelCased,
+            these attributes should be hyphen-cased as they are in plain HTML.
+         </p>
+         <p>
+            Sometimes we break HTML semantics when we add &lt; div &gt; elements
+            to our JSX to make our React code work, especially when working with
+            lists(&lt;ol&gt;, &lt;ul&gt; and &lt;dl&gt;) and the HTML
+            &lt;table&gt;. In these cases we should rather use React Fragments
+            to group together multiple elements.
+         </p>
+         <pre id="codeFragment"></pre>
+         <p>
+            When you don’t need any props on the Fragment tag you can use the
+            short syntax, if your tooling supports it:
+         </p>
+         <pre id="codeShortFragment"></pre>
+         <p>
+            Although these standard HTML practices can be directly used in
+            React, note that the for attribute is written as htmlFor in JSX:
+         </p>
+         <pre id="codeHtmlFor"></pre>
+         <h2>Managing focus</h2>
+         <p>
+            Our React applications continuously modify the HTML DOM during
+            runtime, sometimes leading to keyboard focus being lost or set to an
+            unexpected element. In order to repair this, we need to
+            programmatically nudge the keyboard focus in the right direction.
+            For example, by resetting keyboard focus to a button that opened a
+            modal window after that modal window is closed.
+         </p>
+         <p>To set focus in React, we can use Refs to DOM elements.</p>
+         <pre id="codeRefFocus"></pre>
+         <p>
+            Sometimes a parent component needs to set focus to an element in a
+            child component. We can do this by exposing DOM refs to parent
+            components through a special prop on the child component that
+            forwards the parent’s ref to the child’s DOM node.
+         </p>
+         <pre id="codeParentRef"></pre>
+         <p>
+            When using a HOC to extend components, it is recommended to forward
+            the ref to the wrapped component using the forwardRef function of
+            React. If a third party HOC does not implement ref forwarding, the
+            above pattern can still be used as a fallback.
+         </p>
+      </main>
+
+      <noscript>
+         You need to enable JavaScript to run this app.
+      </noscript>
+      <script src="/dist/advanced-guides/accessibility/app.js"></script>
+   </body>
+</html>
