@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta
+         name="viewport"
+         content="width=device-width, initial-scale=1, minimum-scale=1.0"
+      />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+      <title>Thinking in React | Main Concepts | Learn React</title>
+      <link
+         href="/dist/main-concepts/12-thinking-in-react/app.css"
+         rel="stylesheet"
+      />
+   </head>
+
+   <body>
+      <main class="stage" id="root">
+         <h1>Thinking in React</h1>
+         <p class="intro">
+            One of the many great parts of React is how it makes you think about
+            apps as you build them.
+         </p>
+         <h2>Identify components and their hierarchy</h2>
+         <p>
+            The first thing you’ll want to do is to draw boxes around every
+            component (and subcomponent) in the mock and give them all names.
+         </p>
+         <p>
+            ut how do you know what should be its own component? Use the same
+            techniques for deciding if you should create a new function or
+            object. One such technique is the single responsibility principle,
+            that is, a component should ideally only do one thing. If it ends up
+            growing, it should be decomposed into smaller subcomponents.
+         </p>
+         <p>
+            Once components are identified, you should establish their
+            hierarchy.
+         </p>
+         <h2>Build static version</h2>
+         <p>
+            Now that you have your component hierarchy, it’s time to implement
+            your app. The easiest way is to build a version that takes your data
+            model and renders the UI but has no interactivity. It’s best to
+            decouple these processes because building a static version requires
+            a lot of typing and no thinking, and adding interactivity requires a
+            lot of thinking and not a lot of typing.
+         </p>
+         <p>
+            To build a static version of your app that renders your data model,
+            you’ll want to build components that reuse other components and pass
+            data using props. props are a way of passing data from parent to
+            child. If you’re familiar with the concept of state, don’t use state
+            at all to build this static version. State is reserved only for
+            interactivity, that is, data that changes over time. Since this is a
+            static version of the app, you don’t need it.
+         </p>
+         <p>
+            At the end of this step, you’ll have a library of reusable
+            components that render your data model. The components will only
+            have render() methods since this is a static version of your app.
+         </p>
+         <h2>Identify minimal representation of UI state</h2>
+         <p>
+            To make your UI interactive, you need to be able to trigger changes
+            to your underlying data model. React achieves this with state.
+         </p>
+         <p>
+            The key here is DRY: Don’t Repeat Yourself. Figure out the absolute
+            minimal representation of the state your application needs and
+            compute everything else you need on-demand. For example, if you’re
+            building a TODO list, keep an array of the TODO items around; don’t
+            keep a separate state variable for the count. Instead, when you want
+            to render the TODO count, take the length of the TODO items array.
+         </p>
+         <h2>Identify where your state should live</h2>
+         <p>
+            Next, we need to identify which component mutates, or owns, this
+            state.
+         </p>
+         <p>
+            React is all about one-way data flow down the component hierarchy.
+            It may not be immediately clear which component should own what
+            state. This is often the most challenging part for newcomers to
+            understand, so follow these steps to figure it out:
+         </p>
+         <p>For each piece of state in your application:</p>
+         <ul>
+            <li>
+               Identify every component that renders something based on that
+               state.
+            </li>
+            <li>
+               Find a common owner component (a single component above all the
+               components that need the state in the hierarchy).
+            </li>
+            <li>
+               Either the common owner or another component higher up in the
+               hierarchy should own the state.
+            </li>
+            <li>
+               If you can’t find a component where it makes sense to own the
+               state, create a new component solely for holding the state and
+               add it somewhere in the hierarchy above the common owner
+               component.
+            </li>
+         </ul>
+         <h2>Add inverse data flow</h2>
+         <p>
+            So far, we’ve built an app that renders correctly as a function of
+            props and state flowing down the hierarchy. Now it’s time to support
+            data flowing the other way: any user interaction in child component
+            needs to trigger state change in common ancenstor managing the
+            state. This is achieved by passing callbacks from parent component
+            to child. This callback function will be executed by child component
+            upon user interactions. And the callback function will update the
+            state as needed.
+         </p>
+      </main>
+
+      <noscript>
+         You need to enable JavaScript to run this app.
+      </noscript>
+      <script src="/dist/main-concepts/12-thinking-in-react/app.js"></script>
+   </body>
+</html>

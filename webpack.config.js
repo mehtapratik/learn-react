@@ -17,7 +17,16 @@ module.exports = {
       "main-concepts/06-handling-events/app":
          "./src/main-concepts/06-handling-events",
       "main-concepts/07-conditional-rendering/app":
-         "./src/main-concepts/07-conditional-rendering"
+         "./src/main-concepts/07-conditional-rendering",
+      "main-concepts/08-lists-and-keys/app":
+         "./src/main-concepts/08-lists-and-keys",
+      "main-concepts/09-forms/app": "./src/main-concepts/09-forms",
+      "main-concepts/10-lifting-state-up/app":
+         "./src/main-concepts/10-lifting-state-up",
+      "main-concepts/11-comp-vs-inheritance/app":
+         "./src/main-concepts/11-comp-vs-inheritance",
+      "main-concepts/12-thinking-in-react/app":
+         "./src/main-concepts/12-thinking-in-react"
    },
    output: {
       path: path.resolve(__dirname, "dist/"),
